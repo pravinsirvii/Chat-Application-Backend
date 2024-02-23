@@ -27,7 +27,7 @@ require('dotenv').config();
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@cluster0.gtqtpc3.mongodb.net/chatAppMern?retryWrites=true&w=majority`, {
+    await mongoose.connect(`mongodb+srv://mernchat-yt-user:mYUFXALAUFpG7x2p@cluster0.gtqtpc3.mongodb.net/chatAppMern?retryWrites=true&w=majority`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
