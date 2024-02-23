@@ -5,7 +5,6 @@ const User = require('./models/User');
 const Message = require('./models/Message')
 const rooms = ['general', 'tech', 'finance', 'crypto'];
 const cors = require('cors');
-const BASE_URL =process.env.BASE_URL
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -16,10 +15,10 @@ const connectDB = require('./connection');
 connectDB();
 
 const server = require('http').createServer(app);
-const PORT = process.env.PORT || 5001
+const PORT = 5001;
 const io = require('socket.io')(server, {
   cors: {
-    origin: '${BASE_URL}',
+    origin: 'http://localhost:3000',
     methods: ['GET', 'POST']
   }
 })
